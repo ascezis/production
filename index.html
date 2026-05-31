@@ -1123,6 +1123,44 @@ footer {
 .btn-submit .btn-sending { position: relative; z-index: 1; }
 .btn-submit:disabled { opacity: 0.5; pointer-events: none; }
 #contactForm { display: flex; flex-direction: column; gap: 20px; margin-top: 4px; }
+
+/* Success screen */
+.form-success {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 8px 0;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s var(--ease), transform 0.5s var(--ease);
+}
+.form-success.in { opacity: 1; transform: none; }
+.form-success-icon {
+  font-size: 32px;
+  color: var(--white);
+  border: 1px solid var(--border-strong);
+  width: 52px; height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+}
+.form-success-title {
+  font-family: var(--font-display);
+  font-size: 28px;
+  letter-spacing: 0.04em;
+  color: var(--white);
+  line-height: 1;
+}
+.form-success-sub {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--mid);
+  letter-spacing: 0.08em;
+  line-height: 1.8;
+  font-style: italic;
+}
 @media (max-width: 540px) {
   .field-group { grid-template-columns: 1fr; }
 }
@@ -1950,6 +1988,72 @@ const io = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.08 });
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+/* ── FORM SUBMIT ── */
+const form = document.getElementById('contactForm');
+if (form) {
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    const btn = document.getElementById('submitBtn');
+    const status = document.getElementById('formStatus');
+    const lang = document.documentElement.dataset.lang;
+
+    // Validate
+    let valid = true;
+    form.querySelectorAll('[required]').forEach(field => {
+      if (!field.value.trim()) { field.classList.add('error'); valid = false; }
+      else field.classList.remove('error');
+    });
+    if (!valid) {
+      status.textContent = lang === 'en' ? 'Please fill in all fields.' : 'Заполните все поля.';
+      status.className = 'form-status err';
+      return;
+    }
+
+    // Sending state
+    btn.disabled = true;
+    btn.querySelector('.btn-label').style.display = 'none';
+    btn.querySelector('.btn-sending').style.display = 'inline';
+    status.textContent = '';
+    status.className = 'form-status';
+
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (res.ok) {
+        // Success — replace form with confirmation
+        const box = form.closest('.cta-box');
+        box.innerHTML = `
+          <div class="form-success">
+            <div class="form-success-icon">✓</div>
+            <div class="form-success-title">${lang === 'en' ? 'Message sent.' : 'Сообщение отправлено.'}</div>
+            <div class="form-success-sub">${lang === 'en' ? 'We\'ll get back to you within 24 hours.' : 'Ответим в течение 24 часов.'}</div>
+          </div>`;
+        // Animate in
+        requestAnimationFrame(() => {
+          box.querySelector('.form-success').classList.add('in');
+        });
+      } else {
+        throw new Error('Server error');
+      }
+    } catch {
+      btn.disabled = false;
+      btn.querySelector('.btn-label').style.display = 'inline';
+      btn.querySelector('.btn-sending').style.display = 'none';
+      status.textContent = lang === 'en' ? 'Something went wrong. Try again or write directly.' : 'Ошибка отправки. Попробуйте ещё раз или напишите напрямую.';
+      status.className = 'form-status err';
+    }
+  });
+
+  // Clear error on input
+  form.querySelectorAll('.field-input').forEach(f => {
+    f.addEventListener('input', () => f.classList.remove('error'));
+  });
+}
 </script>
 </body>
 </html>
