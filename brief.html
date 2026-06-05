@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark" data-lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Бриф — ASCEZIS PRODUCTION</title>
+<meta name="description" content="Заполните бриф для старта проекта с Ascezis Production">
+<meta property="og:title" content="Бриф — ASCEZIS PRODUCTION">
+<meta property="og:url" content="https://ascezis.tech/brief">
+<meta property="og:image" content="https://vumbnail.com/1196753238.jpg">
+<link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAIAEBAAAAAAIABLAQAAJgAAACAgAAAAACAApwIAAHEBAACJUE5HDQoaCgAAAA1JSERSAAAAEAAAABAIBgAAAB/z/2EAAAESSURBVHiczVI7SgRBFKx6Nb3O4mCwGBiYGJi4iXgCERYMvYIXMPI+YuSa6Bk0MPIEhposgpnI7OC8Z+AowzALq4kWdNDwXv26gf8MArDfLncX+VNlFEWxLuk8pTReQLpQmSmlPZIPAELSBYDVZa0GAGZZ9gzgleStu8/M7ARANhqN1rpxugQGwKuqGgO4d/d9SZdmtjUcDnfzPE9dgm45BgAkr0hOI2KH5EzSi7sf1nV9/CXSF0cAIOmI5JuoqaSDb2aza0mT9mzbAZszMLO7iLiJiFMAlHQGIIuITQDv7j5pHHhfhEGe5xtlWT4295WU0jYAI1mRLOfz+ROAui9Ct4ulPk/fEPH5nG2yNnoL/Dt8ALYTRhBOtM62AAAAAElFTkSuQmCCiVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACbklEQVR4nO1UPWgUQRh9783M7uZy7t1tqkBAlGsU0xjBGJBYCaIiaBHEiJWNaazsREtBbLTQQhR7FVSwFE1hEwtBmzQKSrCRYCInuQu5schcOPTiz+XOINyDhd2dme+9933ffEAPPfzn4GaSazPJTdO7xT/OhAWAfD6/Q9LDQqFQDP+7LoIIzqMoOiRpHsBcHMdTQQS7KWItsLX2AkkPwAN4KemBMeZyY7lb5ErTNHPOPQrkywCWSc6QvEuyUigUSlhtTP1wtiMCkKZpFkXRUWvtxaYMvE2SZB9Jb4y5HvZHnSJurYa8SfKrMeYGyXkAMMbcluSdc7sb+8rlcjo6OpqhQ9fVAKBzbldwew0AnHNnAeSHhob6rLXPrLXn4zg+2N/fPzkwMLBneHi4UZb1Df2FgBWSTwEcyOVy2yqVymcAKwBgrd1rjDlRr9erxpjZpaWlxwAW23XbihxJkoyR9JIuAQBJSG5CMs+NMdNRFB1zzl2R9HpwcDCHnxuybSgQzpB8PzIy4iRNSJqV9EnSOYRMRlF0PJToarP4jaAxeI6EwPckTZPyhrxVKpUKYZ8D0EcS1tonJH2xWNwahLWdBQLQ+Pi4lfQGq3ffk/yQ2GT/eoeyLEslfbHW3m820Q4s0Oh0+pCBO6G+jfUtkk5JOi1pEsAZSSdJviDpkyQZa1cEATBN08wYMyfpm7V2qmndAUAcx9uNMV7S2tP87Zx7VS6XY6yWoeWN+9Xs9nEc10geBrC4sLDwLgRqjGJUq9WPWZbtDMH92kHvTa1W89ZaF37V/zYDrbDhjm6FPxlEjS5ez8Xvurwj7nvooYeu4TtI73f97ZRkJwAAAABJRU5ErkJggg==">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Martian+Mono:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --black: #0a0a0a; --white: #f0ede8; --mid: #777770;
+  --border: rgba(240,237,232,0.1); --border-strong: rgba(240,237,232,0.28);
+  --card-bg: rgba(240,237,232,0.035);
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-mono: 'DM Mono', monospace;
+  --font-body: 'Martian Mono', monospace;
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+[data-theme="light"] {
+  --black: #f0ede8; --white: #0d0d0d; --mid: #666660;
+  --border: rgba(10,10,10,0.1); --border-strong: rgba(10,10,10,0.28);
+  --card-bg: rgba(10,10,10,0.04);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--black); color: var(--white);
+  font-family: var(--font-body); font-size: 15px; line-height: 1.7;
+  overflow-x: hidden;
+  transition: background 0.45s var(--ease), color 0.45s var(--ease);
+}
+body.has-mouse { cursor: none; }
+a { color: inherit; text-decoration: none; }
+button { background: none; border: none; font-family: inherit; color: inherit; }
+body.has-mouse button, body.has-mouse a { cursor: none; }
+
+/* CURSOR */
+#cursor {
+  position: fixed; width: 10px; height: 10px;
+  background: var(--white); pointer-events: none; z-index: 9999;
+  top: -5px; left: -5px; mix-blend-mode: difference;
+  transition: width 0.2s var(--ease), height 0.2s var(--ease), opacity 0.25s;
+  opacity: 0;
+}
+#cursor.visible { opacity: 1; }
+#cursor.grow { width: 48px; height: 48px; top: -24px; left: -24px; }
+@media (hover: none) and (pointer: coarse) {
+  #cursor { display: none !important; } body { cursor: auto !important; }
+  a, button { cursor: pointer !important; }
+}
+
+/* LANG */
+[data-lang="ru"] .en { display: none; }
+[data-lang="en"] .ru { display: none; }
+
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 20px 40px; border-bottom: 1px solid transparent;
+  transition: border-color 0.3s, background 0.3s;
+}
+nav.scrolled {
+  border-color: var(--border);
+  background: color-mix(in srgb, var(--black) 80%, transparent);
+  backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+}
+.nav-logo { font-family: var(--font-display); font-size: 20px; letter-spacing: 0.1em; line-height: 1; }
+.nav-logo sub { font-family: var(--font-mono); font-size: 9px; color: var(--mid); letter-spacing: 0.2em; vertical-align: bottom; margin-left: 6px; font-style: italic; font-weight: 300; }
+.nav-right { display: flex; align-items: center; gap: 8px; }
+.nav-btn {
+  font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.15em;
+  color: var(--mid); padding: 8px 14px; border: 1px solid var(--border);
+  transition: all 0.2s; text-transform: uppercase;
+}
+.nav-btn:hover { color: var(--white); border-color: var(--border-strong); }
+.nav-back {
+  font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.15em;
+  color: var(--mid); display: flex; align-items: center; gap: 8px;
+  transition: color 0.2s;
+}
+.nav-back:hover { color: var(--white); }
+.nav-back::before { content: '←'; }
+
+/* MAIN */
+main { padding: 140px 40px 100px; max-width: 900px; margin: 0 auto; }
+
+/* HERO */
+.brief-hero { margin-bottom: 72px; }
+.brief-label {
+  font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.28em;
+  text-transform: uppercase; color: var(--mid); margin-bottom: 20px;
+  display: flex; align-items: center; gap: 14px;
+}
+.brief-label::before { content: ''; display: block; width: 36px; height: 1px; background: var(--mid); }
+.brief-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+.brief-title {
+  font-family: var(--font-display); font-size: clamp(52px, 9vw, 110px);
+  line-height: 0.9; letter-spacing: 0.01em; margin-bottom: 24px;
+}
+.brief-title em { font-style: normal; color: var(--mid); display: block; }
+.brief-sub {
+  font-family: var(--font-mono); font-size: 13px; color: var(--mid);
+  line-height: 1.9; max-width: 560px; font-style: italic;
+}
+
+/* FORM */
+#briefForm { display: flex; flex-direction: column; gap: 0; }
+
+.form-block {
+  border-top: 1px solid var(--border); padding: 40px 0 44px;
+  opacity: 0; transform: translateY(24px);
+  transition: opacity 0.6s var(--ease), transform 0.6s var(--ease);
+}
+.form-block.in { opacity: 1; transform: none; }
+.block-num {
+  font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.28em;
+  color: var(--mid); margin-bottom: 12px; font-style: italic;
+}
+.block-title {
+  font-family: var(--font-display); font-size: clamp(22px, 3vw, 32px);
+  letter-spacing: 0.04em; margin-bottom: 28px; line-height: 1;
+}
+.fields { display: flex; flex-direction: column; gap: 20px; }
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.field { display: flex; flex-direction: column; gap: 8px; }
+.field-label {
+  font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.22em;
+  text-transform: uppercase; color: var(--mid);
+}
+.field-label .req { color: var(--white); margin-left: 3px; }
+.field-input {
+  background: transparent; border: none;
+  border-bottom: 1px solid var(--border-strong);
+  color: var(--white); font-family: var(--font-mono); font-size: 14px;
+  padding: 10px 0; outline: none; transition: border-color 0.2s; width: 100%;
+  resize: none; appearance: none; -webkit-appearance: none;
+}
+.field-input::placeholder { color: var(--border-strong); }
+.field-input:focus { border-bottom-color: var(--white); }
+.field-input.error { border-bottom-color: #c0392b; }
+textarea.field-input { min-height: 90px; }
+
+/* CHECKBOXES */
+.check-group { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+.check-item { position: relative; }
+.check-item input[type="checkbox"] { position: absolute; opacity: 0; width: 0; height: 0; }
+.check-item label {
+  font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.15em;
+  text-transform: uppercase; color: var(--mid); padding: 10px 18px;
+  border: 1px solid var(--border); display: block;
+  transition: all 0.2s; cursor: pointer;
+}
+body.has-mouse .check-item label { cursor: none; }
+.check-item input:checked + label {
+  border-color: var(--white); color: var(--white); background: var(--card-bg);
+}
+.check-item label:hover { border-color: var(--border-strong); color: var(--white); }
+
+/* RADIO BUDGET */
+.radio-group { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+.radio-item { position: relative; }
+.radio-item input[type="radio"] { position: absolute; opacity: 0; width: 0; height: 0; }
+.radio-item label {
+  font-family: var(--font-display); font-size: 18px; letter-spacing: 0.05em;
+  color: var(--mid); padding: 14px 22px;
+  border: 1px solid var(--border); display: block;
+  transition: all 0.2s; cursor: pointer;
+}
+body.has-mouse .radio-item label { cursor: none; }
+.radio-item input:checked + label {
+  border-color: var(--white); color: var(--white); background: var(--card-bg);
+}
+.radio-item label:hover { border-color: var(--border-strong); color: var(--white); }
+
+/* SUBMIT */
+.form-submit-row {
+  border-top: 1px solid var(--border); padding-top: 40px;
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 20px;
+  opacity: 0; transform: translateY(24px);
+  transition: opacity 0.6s var(--ease), transform 0.6s var(--ease);
+}
+.form-submit-row.in { opacity: 1; transform: none; }
+.form-note { font-family: var(--font-mono); font-size: 11px; color: var(--mid); line-height: 1.8; max-width: 380px; font-style: italic; }
+.form-status { font-family: var(--font-mono); font-size: 11px; color: var(--mid); }
+.form-status.err { color: #c0392b; }
+
+.btn-submit {
+  font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.2em;
+  text-transform: uppercase; padding: 16px 36px;
+  border: 1px solid var(--border-strong);
+  position: relative; overflow: hidden;
+  transition: color 0.28s var(--ease); white-space: nowrap;
+}
+.btn-submit::before {
+  content: ''; position: absolute; inset: 0;
+  background: var(--white); transform: translateX(-102%);
+  transition: transform 0.3s var(--ease);
+}
+.btn-submit:hover::before { transform: translateX(0); }
+.btn-submit:hover { color: var(--black); }
+.btn-submit span { position: relative; z-index: 1; }
+.btn-submit:disabled { opacity: 0.4; pointer-events: none; }
+
+/* SUCCESS */
+.brief-success {
+  padding: 80px 0;
+  opacity: 0; transform: translateY(20px);
+  transition: opacity 0.5s var(--ease), transform 0.5s var(--ease);
+  display: none;
+}
+.brief-success.in { opacity: 1; transform: none; }
+.success-icon {
+  font-family: var(--font-mono); font-size: 28px;
+  border: 1px solid var(--border-strong);
+  width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;
+  margin-bottom: 28px;
+}
+.success-title {
+  font-family: var(--font-display); font-size: clamp(36px, 6vw, 72px);
+  line-height: 0.95; letter-spacing: 0.02em; margin-bottom: 20px;
+}
+.success-title em { font-style: normal; color: var(--mid); display: block; }
+.success-sub { font-family: var(--font-mono); font-size: 13px; color: var(--mid); line-height: 2; font-style: italic; }
+
+/* FOOTER */
+footer {
+  border-top: 1px solid var(--border); padding: 24px 40px;
+  display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+}
+.footer-logo { font-family: var(--font-display); font-size: 14px; letter-spacing: 0.14em; }
+.footer-copy { font-family: var(--font-mono); font-size: 11px; color: var(--mid); letter-spacing: 0.14em; }
+
+/* RESPONSIVE */
+@media (max-width: 860px) {
+  nav { padding: 16px 20px; }
+  main { padding: 110px 20px 80px; }
+  .field-row { grid-template-columns: 1fr; }
+  footer { flex-direction: column; text-align: center; }
+}
+@media (max-width: 540px) {
+  .radio-group { gap: 6px; }
+  .radio-item label { font-size: 15px; padding: 12px 16px; }
+  .form-submit-row { flex-direction: column; align-items: flex-start; }
+  .btn-submit { width: 100%; text-align: center; }
+}
+</style>
+</head>
+<body>
+<div id="cursor"></div>
+
+<nav id="nav">
+  <a href="/" class="nav-logo">ASCEZIS <sub>production</sub></a>
+  <div class="nav-right">
+    <a href="/" class="nav-back"><span class="ru">Главная</span><span class="en">Home</span></a>
+    <button class="nav-btn" id="langBtn" onclick="toggleLang()">EN</button>
+    <button class="nav-btn" id="themeBtn" onclick="toggleTheme()">☀</button>
+  </div>
+</nav>
+
+<main>
+  <!-- HERO -->
+  <div class="brief-hero form-block in">
+    <div class="brief-label"><span class="ru">Бриф на проект</span><span class="en">Project brief</span></div>
+    <h1 class="brief-title">
+      <span class="ru">РАССКАЖИТЕ<br><em>О ПРОЕКТЕ</em></span>
+      <span class="en">TELL US<br><em>ABOUT IT</em></span>
+    </h1>
+    <p class="brief-sub ru">Заполните форму — чем подробнее, тем точнее мы оценим задачу и предложим решение.</p>
+    <p class="brief-sub en">Fill out the form — the more detail you give, the more precisely we can scope and propose a solution.</p>
+  </div>
+
+  <form id="briefForm" novalidate>
+    <!-- Web3Forms -->
+    <input type="hidden" name="access_key" value="64866394-529b-4bed-902f-eaa91e584834">
+    <input type="hidden" name="subject" value="Новый бриф — Ascezis Production">
+    <input type="checkbox" name="botcheck" style="display:none">
+
+    <!-- 01 Контакт -->
+    <div class="form-block">
+      <div class="block-num">01</div>
+      <div class="block-title ru">КТО ВЫ?</div>
+      <div class="block-title en">WHO ARE YOU?</div>
+      <div class="fields">
+        <div class="field-row">
+          <div class="field">
+            <label class="field-label" for="b-name">
+              <span class="ru">Имя <span class="req">*</span></span>
+              <span class="en">Name <span class="req">*</span></span>
+            </label>
+            <input class="field-input" type="text" id="b-name" name="name" required placeholder="—">
+          </div>
+          <div class="field">
+            <label class="field-label" for="b-contact">
+              <span class="ru">Telegram или Email <span class="req">*</span></span>
+              <span class="en">Telegram or Email <span class="req">*</span></span>
+            </label>
+            <input class="field-input" type="text" id="b-contact" name="contact" required placeholder="—">
+          </div>
+        </div>
+        <div class="field">
+          <label class="field-label" for="b-link">
+            <span class="ru">Ссылка на проект / канал / соцсети</span>
+            <span class="en">Project / channel / social media link</span>
+          </label>
+          <input class="field-input" type="url" id="b-link" name="project_link" placeholder="https://...">
+        </div>
+      </div>
+    </div>
+
+    <!-- 02 Тип проекта -->
+    <div class="form-block">
+      <div class="block-num">02</div>
+      <div class="block-title ru">ТИП ПРОЕКТА <span style="color:var(--mid);font-size:0.55em;letter-spacing:0.1em"> * выберите один или несколько</span></div>
+      <div class="block-title en">PROJECT TYPE <span style="color:var(--mid);font-size:0.55em;letter-spacing:0.1em"> * one or more</span></div>
+      <div class="check-group">
+        <div class="check-item">
+          <input type="checkbox" id="t-edit" name="type_editing" value="Монтаж">
+          <label for="t-edit"><span class="ru">Монтаж</span><span class="en">Editing</span></label>
+        </div>
+        <div class="check-item">
+          <input type="checkbox" id="t-motion" name="type_motion" value="Моушн">
+          <label for="t-motion"><span class="ru">Моушн</span><span class="en">Motion</span></label>
+        </div>
+        <div class="check-item">
+          <input type="checkbox" id="t-shorts" name="type_shorts" value="Шортс / Рилс">
+          <label for="t-shorts">Shorts / Reels</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- 03 Референсы -->
+    <div class="form-block">
+      <div class="block-num">03</div>
+      <div class="block-title ru">РЕФЕРЕНСЫ</div>
+      <div class="block-title en">REFERENCES</div>
+      <div class="fields">
+        <div class="field">
+          <label class="field-label" for="b-ref-like">
+            <span class="ru">Ссылки на видео которые нравятся <span class="req">*</span></span>
+            <span class="en">Videos you like <span class="req">*</span></span>
+          </label>
+          <textarea class="field-input" id="b-ref-like" name="refs_like" required rows="3" placeholder="https://..."></textarea>
+        </div>
+        <div class="field">
+          <label class="field-label" for="b-ref-dislike">
+            <span class="ru">Ссылки на видео которые не нравятся</span>
+            <span class="en">Videos you don't like</span>
+          </label>
+          <textarea class="field-input" id="b-ref-dislike" name="refs_dislike" rows="3" placeholder="https://..."></textarea>
+        </div>
+      </div>
+    </div>
+
+    <!-- 04 Бренд -->
+    <div class="form-block">
+      <div class="block-num">04</div>
+      <div class="block-title ru">БРЕНД</div>
+      <div class="block-title en">BRAND</div>
+      <div class="fields">
+        <div class="field">
+          <label class="field-label" for="b-brand">
+            <span class="ru">Цвета и шрифты бренда</span>
+            <span class="en">Brand colors and fonts</span>
+          </label>
+          <textarea class="field-input" id="b-brand" name="brand" rows="3"
+            placeholder="—"></textarea>
+        </div>
+      </div>
+    </div>
+
+    <!-- 05 Дедлайн и бюджет -->
+    <div class="form-block">
+      <div class="block-num">05</div>
+      <div class="block-title ru">СРОКИ И БЮДЖЕТ</div>
+      <div class="block-title en">TIMELINE & BUDGET</div>
+      <div class="fields">
+        <div class="field">
+          <label class="field-label" for="b-deadline">
+            <span class="ru">Дедлайн <span class="req">*</span></span>
+            <span class="en">Deadline <span class="req">*</span></span>
+          </label>
+          <input class="field-input" type="text" id="b-deadline" name="deadline" required placeholder="—">
+        </div>
+        <div class="field">
+          <div class="field-label ru">Бюджет <span class="req">*</span></div>
+          <div class="field-label en">Budget <span class="req">*</span></div>
+          <div class="radio-group" id="budgetGroup">
+            <div class="radio-item">
+              <input type="radio" id="b-b1" name="budget" value="до 5 000 ₽">
+              <label for="b-b1">до 5к ₽</label>
+            </div>
+            <div class="radio-item">
+              <input type="radio" id="b-b2" name="budget" value="5 000 — 15 000 ₽">
+              <label for="b-b2">5–15к ₽</label>
+            </div>
+            <div class="radio-item">
+              <input type="radio" id="b-b3" name="budget" value="15 000 — 30 000 ₽">
+              <label for="b-b3">15–30к ₽</label>
+            </div>
+            <div class="radio-item">
+              <input type="radio" id="b-b4" name="budget" value="30 000+ ₽">
+              <label for="b-b4">30к+ ₽</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 06 Главное -->
+    <div class="form-block">
+      <div class="block-num">06</div>
+      <div class="block-title ru">ГЛАВНОЕ В ПРОЕКТЕ</div>
+      <div class="block-title en">WHAT MATTERS MOST</div>
+      <div class="fields">
+        <div class="field">
+          <label class="field-label" for="b-important">
+            <span class="ru">Что самое важное? <span class="req">*</span></span>
+            <span class="en">What's most important? <span class="req">*</span></span>
+          </label>
+          <textarea class="field-input" id="b-important" name="important" required rows="4"
+            placeholder="—"></textarea>
+        </div>
+      </div>
+    </div>
+
+    <!-- SUBMIT -->
+    <div class="form-submit-row">
+      <p class="form-note ru">Заполнили всё? Отправляйте — мы свяжемся в течение 24 часов.</p>
+      <p class="form-note en">All done? Hit send — we'll be in touch within 24 hours.</p>
+      <div style="display:flex;flex-direction:column;gap:10px;align-items:flex-end">
+        <div class="form-status" id="briefStatus"></div>
+        <button type="submit" class="btn-submit" id="briefSubmit">
+          <span id="btnLabel"><span class="ru">Отправить бриф</span><span class="en">Send brief</span></span>
+          <span id="btnSending" style="display:none"><span class="ru">Отправляем…</span><span class="en">Sending…</span></span>
+        </button>
+      </div>
+    </div>
+  </form>
+
+  <!-- SUCCESS -->
+  <div class="brief-success" id="briefSuccess">
+    <div class="success-icon">✓</div>
+    <div class="success-title">
+      <span class="ru">БРИФ<br><em>ПОЛУЧЕН.</em></span>
+      <span class="en">BRIEF<br><em>RECEIVED.</em></span>
+    </div>
+    <p class="success-sub ru">Ответим в течение 24 часов. Если срочно — пишите в Telegram @ascezis.</p>
+    <p class="success-sub en">We'll respond within 24 hours. If urgent — message us on Telegram @ascezis.</p>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-logo">ASCEZIS</div>
+  <div class="footer-copy">© <span id="year"></span> ASCEZIS PRODUCTION</div>
+  <div class="footer-copy">ascezisproduction@gmail.com</div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+/* CURSOR */
+const cursor = document.getElementById('cursor');
+window.addEventListener('mousemove', () => {
+  document.body.classList.add('has-mouse');
+}, { once: true });
+document.addEventListener('mousemove', e => {
+  cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+  cursor.classList.add('visible');
+});
+document.addEventListener('mouseleave', () => cursor.classList.remove('visible'));
+document.querySelectorAll('a, button, .check-item label, .radio-item label').forEach(el => {
+  el.addEventListener('mouseenter', () => cursor.classList.add('grow'));
+  el.addEventListener('mouseleave', () => cursor.classList.remove('grow'));
+});
+
+/* NAV */
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 50);
+}, { passive: true });
+
+/* THEME */
+function toggleTheme() {
+  const isDark = document.documentElement.dataset.theme === 'dark';
+  document.documentElement.dataset.theme = isDark ? 'light' : 'dark';
+  document.getElementById('themeBtn').textContent = isDark ? '☾' : '☀';
+}
+
+/* LANG */
+function toggleLang() {
+  const isRu = document.documentElement.dataset.lang === 'ru';
+  document.documentElement.dataset.lang = isRu ? 'en' : 'ru';
+  document.documentElement.lang = isRu ? 'en' : 'ru';
+  document.getElementById('langBtn').textContent = isRu ? 'RU' : 'EN';
+}
+
+/* REVEAL */
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+  });
+}, { threshold: 0.06 });
+document.querySelectorAll('.form-block, .form-submit-row').forEach(el => io.observe(el));
+
+/* FORM */
+const form = document.getElementById('briefForm');
+form.addEventListener('submit', async e => {
+  e.preventDefault();
+  const lang = document.documentElement.dataset.lang;
+  const btn = document.getElementById('briefSubmit');
+  const status = document.getElementById('briefStatus');
+
+  // validate required
+  let valid = true;
+  form.querySelectorAll('[required]').forEach(f => {
+    if (!f.value.trim()) { f.classList.add('error'); valid = false; }
+    else f.classList.remove('error');
+  });
+  // validate budget
+  const budget = form.querySelector('[name="budget"]:checked');
+  if (!budget) {
+    status.textContent = lang === 'en' ? 'Please select a budget range.' : 'Выберите диапазон бюджета.';
+    status.className = 'form-status err';
+    valid = false;
+  }
+  if (!valid && !budget) return;
+  if (!valid) {
+    status.textContent = lang === 'en' ? 'Please fill in required fields.' : 'Заполните обязательные поля.';
+    status.className = 'form-status err';
+    return;
+  }
+
+  // sending
+  btn.disabled = true;
+  document.getElementById('btnLabel').style.display = 'none';
+  document.getElementById('btnSending').style.display = 'inline';
+  status.textContent = ''; status.className = 'form-status';
+
+  try {
+    const res = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
+    if (res.ok) {
+      form.style.display = 'none';
+      const success = document.getElementById('briefSuccess');
+      success.style.display = 'block';
+      requestAnimationFrame(() => success.classList.add('in'));
+    } else { throw new Error(); }
+  } catch {
+    btn.disabled = false;
+    document.getElementById('btnLabel').style.display = 'inline';
+    document.getElementById('btnSending').style.display = 'none';
+    status.textContent = lang === 'en' ? 'Error. Try again or write directly.' : 'Ошибка. Попробуйте ещё раз.';
+    status.className = 'form-status err';
+  }
+});
+form.querySelectorAll('.field-input').forEach(f => {
+  f.addEventListener('input', () => f.classList.remove('error'));
+});
+</script>
+</body>
+</html>
